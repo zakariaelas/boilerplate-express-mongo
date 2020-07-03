@@ -2,11 +2,11 @@
  * This is where I typically define and configure different auth strategies to work with passport
  * This template uses assumes a JWT authentication system but you can add more strategies in this file
  */
-const config = require('../../config/');
+const config = require('../../config');
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const { ExtractJwt, Strategy: JwtStrategy } = require('passport-jwt');
-const { CustomError, ForbiddenError } = require('../../errors/');
+const { CustomError, ForbiddenError } = require('../../errors');
 const db = require('../../db');
 
 const jwtStrategy = new JwtStrategy(
